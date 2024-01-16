@@ -1,0 +1,104 @@
+body,
+div,
+p {
+    margin: 0;
+}
+
+header {
+    height: 64px;
+    background-color: #2196F3;
+    box-shadow: 0px 4px 4px 0px #0000003D;
+    display: flex;
+    padding-left: 64px;
+    align-items: center;
+}
+
+.header__tab {
+    padding: 20px;
+}
+
+.header__tab_selected {
+    background-color: #1E88E5;
+}
+
+.header__tab__text {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFFB2;
+}
+
+.header__tab__text_selected {
+    color: #FFFFFF;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 64px;
+    justify-content: space-between;
+}
+
+.picture-with-cat {
+    width: 225px;
+    height: 225px;
+    margin-bottom: 48px;
+    margin-right: 48px;
+    background-color: blue;
+    position: relative;
+}
+
+.picture-with-cat:hover {
+    outline: #FFFFFF solid 15px;
+    box-shadow: 0px 9px 18px 0px #0000002E, 0px 6px 5px 0px #0000003D;
+}
+
+.picture-with-cat:hover::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.picture-with-cat_random:hover::after {
+    content: url("../images/empty-heart.png");
+}
+
+.picture-with-cat_favorite:hover::after {
+    content: url("../images/filled-heart.png");
+}
+
+footer {
+    text-align: center;
+}
+
+.footer_text {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+}
+
+
+@media (max-width: 767px) {
+    header {
+        padding-left: 0;
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+
+    .main-content {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .picture-with-cat {
+        margin-bottom: 24px;
+        margin-right: 24px;
+    }
+}
+
+
+/*@media (min-width: 767px) and (max-width: 1200px) {
+}*/
