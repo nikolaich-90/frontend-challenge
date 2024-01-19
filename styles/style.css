@@ -37,7 +37,6 @@ header {
     display: flex;
     flex-wrap: wrap;
     padding: 64px;
-    justify-content: space-between;
 }
 
 .picture-with-cat {
@@ -51,21 +50,26 @@ header {
 
 .picture-with-cat:hover {
     outline: #FFFFFF solid 15px;
-    box-shadow: 0px 9px 18px 0px #0000002E, 0px 6px 5px 0px #0000003D;
+    box-shadow: 0px 9px 18px 0px #000000, 0px 6px 5px 0px #000000;
 }
 
-.picture-with-cat:hover::after {
+/*тени исправлены с #0000002E и #0000003D соответственно*/
+
+.picture-with-cat__picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.picture-with-cat__heart {
     position: absolute;
     bottom: 0;
     right: 0;
+    opacity: 0;
 }
 
-.picture-with-cat_random:hover::after {
-    content: url("../images/empty-heart.png");
-}
-
-.picture-with-cat_favorite:hover::after {
-    content: url("../images/filled-heart.png");
+.picture-with-cat:hover .picture-with-cat__heart {
+    opacity: 1;
 }
 
 footer {
@@ -96,6 +100,10 @@ footer {
     .picture-with-cat {
         margin-bottom: 24px;
         margin-right: 24px;
+    }
+
+    .picture-with-cat__heart {
+        opacity: 1;
     }
 }
 
